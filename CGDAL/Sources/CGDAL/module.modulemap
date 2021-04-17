@@ -1,5 +1,4 @@
-module
-CGDAL
+module CGDAL [system]
 {
     header "../../Headers/Bridging-Header.h"
     link "gdal"

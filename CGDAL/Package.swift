@@ -9,7 +9,12 @@ let package = Package(
         .library(name: "CGDAL",  targets: ["CGDAL"]),
     ],
     targets: [
-    	.systemLibrary(name: "CGDAL"),
+    	.systemLibrary(
+			name: "CGDAL",
 //        .testTarget(name: "CGDALTests", dependencies: ["CGDAL"]),
-    ]
+			providers: [
+				.brew(["gdal"]),
+				.apt(["libgdal"])
+			])
+	]
 )

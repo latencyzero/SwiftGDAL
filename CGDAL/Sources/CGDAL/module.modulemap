@@ -1,0 +1,7 @@
+module
+CGDAL
+{
+    header "../../Headers/Bridging-Header.h"
+    link "gdal"
+    export *
+}

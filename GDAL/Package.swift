@@ -17,10 +17,13 @@ let package = Package(
     targets: [
     	.target(
     		name: "TestGDAL",
-    		dependencies: ["GDAL"]),
+    		dependencies: ["GDAL"]
+		),
         .target(
             name: "GDAL",
-            dependencies: ["CGDAL"]),
+            dependencies: ["CGDAL"],
+            linkerSettings: [.unsafeFlags(["-L/usr/local/lib"])]
+		),
     	.systemLibrary(
 			name: "CGDAL",
 			providers: [

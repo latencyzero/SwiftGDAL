@@ -11,7 +11,9 @@ let package = Package(
     targets: [
         .target(
             name: "TestGDAL",
-            dependencies: ["CGDAL"]),
+            dependencies: ["CGDAL"],
+            linkerSettings: [.unsafeFlags(["-L/usr/local/lib"])]
+		),
         .testTarget(
             name: "Tests",
             dependencies: ["TestGDAL"]),

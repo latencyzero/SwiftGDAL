@@ -1,6 +1,0 @@
-module CGDAL [system]
-{
-    header "shim.h"
-    link "gdal"
-    export *
-}
